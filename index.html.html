@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Invitación Sebas</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background: #000;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      overflow: hidden;
+      font-family: 'Georgia', serif;
+    }
+
+    /* Contenedor general */
+    .container {
+      text-align: center;
+      position: relative;
+    }
+
+    /* Sobre negro */
+    .sobre {
+      width: 400px;
+      height: 250px;
+      background: #111;
+      border: 3px solid #d4af37;
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: #d4af37;
+      font-size: 28px;
+      font-weight: bold;
+      border-radius: 8px;
+      box-shadow: 0px 0px 25px rgba(212,175,55,0.6);
+    }
+
+    /* Líneas en V */
+    .sobre::before, .sobre::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 50%;
+      width: 140px;
+      height: 140px;
+      border-top: 3px solid #d4af37;
+      transform: translateX(-50%) rotate(45deg);
+    }
+
+    .sobre::after {
+      transform: translateX(-50%) rotate(-45deg);
+    }
+
+    /* Texto elegante */
+    .texto {
+      font-family: 'Brush Script MT', cursive;
+      font-size: 32px;
+      text-shadow: 0px 0px 10px rgba(212,175,55,0.8);
+    }
+
+    /* Imagen de la invitación */
+    .invitacion {
+      display: none;
+      max-width: 90%;
+      max-height: 90vh;
+      border: 4px solid #d4af37;
+      border-radius: 12px;
+      box-shadow: 0px 0px 30px rgba(212,175,55,0.8);
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <!-- Sobre negro -->
+    <div class="sobre">
+      <div class="texto">Te invito a mi Grado</div>
+    </div>
+
+    <!-- Imagen de la invitación -->
+    <img src="Invitacion_Sebas.jpg" alt="Invitación Sebas" class="invitacion">
+  </div>
+
+  <script>
+    // Después de 1 segundo, mostrar la invitación
+    setTimeout(() => {
+      document.querySelector('.sobre').style.display = 'none';
+      document.querySelector('.invitacion').style.display = 'block';
+    }, 2000);
+  </script>
+</body>
+</html>
+
+
